@@ -19,7 +19,7 @@ namespace Microsoft.CodeAnalysis.Sarif.Multitool
 {
     public class SuppressCommandTests
     {
-        private const int DateTimeAssertPrecision = 500;
+        private static readonly TimeSpan DateTimeAssertPrecision = new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 0, milliseconds: 500);
 
         [Fact]
         public void SuppressCommand_ShouldReturnFailure_WhenBadArgumentsAreSupplied()

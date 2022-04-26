@@ -14,7 +14,7 @@ namespace Microsoft.CodeAnalysis.Sarif.UnitTests.Visitors
 {
     public class SuppressVisitorTests
     {
-        private const int DateTimeAssertPrecision = 500;
+        private static readonly TimeSpan DateTimeAssertPrecision = new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 0, milliseconds: 500);
 
         [Fact]
         public void SuppressVisitor_ShouldFlowPropertiesCorrectly()
