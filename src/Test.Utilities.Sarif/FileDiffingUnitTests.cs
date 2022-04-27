@@ -96,7 +96,7 @@ namespace Microsoft.CodeAnalysis.Sarif
         public string GetInputSarifTextFromResource(string resourceName)
             => GetResourceText(GetFullResourcePathForInputResource(resourceName));
 
-        private string GetFullResourcePathForInputResource(string resourceName)
+        public string GetFullResourcePathForInputResource(string resourceName)
         {
             return $"{TestLogResourceNameRoot}.Inputs.{resourceName}";
         }
